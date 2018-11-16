@@ -16,3 +16,5 @@ for bn in bns:
 	for pr in prs:
 		print pr.nodeName,':',pr.childNodes[0].nodeValue
 	print '******************************************'
+
+
