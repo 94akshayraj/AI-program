@@ -15,4 +15,4 @@ imgx = np.hstack([thresh1])
 cv.imshow("desd",imgx)
 cv.waitKey(0)
 
-cv.write("walking binary.jpg")
+cv.write("walking binary.jpg")	
