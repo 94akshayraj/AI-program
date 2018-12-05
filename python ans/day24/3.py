@@ -1,21 +1,28 @@
-import pandas as pd
-from pandas import DataFrame as df
+from pandas import DataFrame as f
 import numpy as np
-
-item = ['Laptops','Speakers','Printers','Desktops']*5
-place = ['KL']*4+['TN']*4+['KA']*4+['BIHAR']*4+['BENGAL']*4
-total = np.random.randint(50,100,20)
-
-dtfr = df({'Items':item,'Places':place,'Total':total})
-
-#print dtfr
-
+import random
+item=['Laptops','Printers','Speakers','Desktops']*5
+place=['KL']*4+['TN']*4+['KA']*4+['BIHAR']*4+['BENGAL']*4
+total=random.sample(range(10,50),20)
+df=f({'Items':item,'Places':place,'Total':total})
+print df,"\n\n"
 while True:
-	inp = input('1: Display items. \n2: Display places.\n')
-	if inp == 1:
-		itm = raw_input('Enter the product name.\n')
-		show_item = dtfr[dtfr['Items']==itm]
-		totl = show_item['Total']['Places']
-		
-
-		print place_in_total
+	x=input("\n1.Display Placewise Rank \n2.Display Itemwise Rank \n3.Exit\n>")
+	if x==1:
+		it=raw_input()
+		il=df[df['Items']==it]
+		il=il.copy()
+		tol=il['Total']
+		rank=tol.rank(ascending=True)
+		il['Rank']=rank
+		print il
+	elif x==2:
+		p=raw_input("Enter the place Name : ")
+		pl=df[df['Places']==p]
+                pl=pl.copy()
+                tol=pl['Total']
+                rank=tol.rank(ascending=True)
+                pl['Rank']=rank
+                print pl
+	else:
+		break
