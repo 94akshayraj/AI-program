@@ -1,28 +1,17 @@
 
 # coding: utf-8
 
-# In[1]:
-
-
 import numpy as np
 import pandas as pd
 from pandas import DataFrame as df
 
 
-# In[2]:
-
-
 def initialize():
+	global = data
 	df = np.dtype([('empname','S20'),('empno','i8'),('empdesig','S10'),('empsalary','f8'),('empph','S10')])
 	data = np.loadtxt('/home/ai3/Desktop/common/Python_Exercises/emp.csv',delimiter=',',dtype=df)
 	data = pd.read_csv('/home/ai3/Desktop/common/Python_Exercises/emp.csv', sep=',')
 	data = data.as_matrix
-	print data
-
-# In[3]:
-
-# In[4]:
-
 
 def add():
 	aempname = raw_input()
@@ -31,31 +20,15 @@ def add():
 	aempsalary = input()
 	aempph = input()
 	datlist = [(aempname,aempno,aempdesig,aempsalary,aempph)]
-	#type(datlist)
-	
+
 	aemp = np.array(datlist,dtype=df)
 	data_final = np.concatenate([data,aemp],axis=0)
 	print data_final
-	
-
-# In[5]:
-
-
-
-
-
-
-# In[6]:
-
 
 def delete():
 	n = np.where(data==data[data['empno']==input('Enter employee number to fire him/her.')])
 	data = np.delete(data, n)
 	print data
-
-
-# In[12]:
-
 
 def dispname():
 	disp_data = input('Enter employee name/number to see her/his record.')
@@ -66,30 +39,14 @@ def dispname():
 #data[(data['empno'] data['empname'])==input('Enter employee name/number to see her/his record.')]
 #date
 
-
-# In[15]:
-
-
 def disp():
 	print data
-
-
-# In[17]:
-
 
 def save():
 	data.to_csv('emp_reloded.csv')
 
-
-# In[ ]:
-
-
 def exit():
 	exit()
-
-
-# In[ ]:
-
 
 def menu():
     print 'High priority confidential record maintenance systems and Co.'
