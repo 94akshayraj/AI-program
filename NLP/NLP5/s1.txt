@@ -1,0 +1,1 @@
+The prerequisites to follow this example are python version 2.7.3 and jupyter notebook. You can just install anaconda and it will get everything for you. Also, little bit of python and ML basics including text classification is required. We will be using scikit-learn (python) libraries for our example.
