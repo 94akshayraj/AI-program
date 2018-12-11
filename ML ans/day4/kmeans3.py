@@ -5,7 +5,7 @@ import pandas as pd
 import numpy as np
 from mpl_toolkits import mplot3d
 
-data = pd.read_csv("/home/ai3/ML ans/Kmean/data_breast.txt", delim_whitespace = True)
+data = pd.read_csv("/Users/spacslug/ML-Day1/ML ans/day4/data_breast.txt", delim_whitespace = True)
 
 data = data.as_matrix()
 

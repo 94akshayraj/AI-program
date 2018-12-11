@@ -4,7 +4,7 @@ import pandas as pd
 import numpy as np
 from sklearn.metrics import mean_squared_error,mean_absolute_error
 
-data = pd.read_csv("/home/ai3/ML ans/LR/data_mruder.txt")
+data = pd.read_csv("/Users/spacslug/ML-Day1/ML ans/day3/data_mruder.txt")
 
 data = data.as_matrix()
 
